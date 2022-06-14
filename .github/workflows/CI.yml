@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: xcodebuild clean build -project src/StringCalculator.xcodeproj -scheme StringCalculator
+      - name: Run tests
+        run: xcodebuild tests -project src/StringCalculator.xcodeproj -scheme StringCalculator
