@@ -14,4 +14,4 @@ jobs:
       - name: Build
         run: xcodebuild clean build -project src/StringCalculator.xcodeproj -scheme StringCalculator
       - name: Run tests
-        run: xcodebuild tests -project src/StringCalculator.xcodeproj -scheme StringCalculator
+        run: xcodebuild test -project src/StringCalculator.xcodeproj -scheme StringCalculator
