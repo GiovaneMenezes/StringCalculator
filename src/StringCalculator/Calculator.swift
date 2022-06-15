@@ -46,6 +46,7 @@ struct Calculator {
         let numbersIntArray = cleanNumbers
             .split(separator: separator ?? ",")
             .map( { Int($0) ?? 0 } )
+            .filter( { $0 <= 1000 } )
         try verifyNegativeElements(array: numbersIntArray)
         return numbersIntArray.reduce(0, { $0 + $1})
     }

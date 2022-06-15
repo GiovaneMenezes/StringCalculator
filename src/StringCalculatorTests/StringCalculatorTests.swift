@@ -37,6 +37,14 @@ class StringCalculatorTests: XCTestCase {
             errorMessage: "Negatives not allowed: [-1, -3, -4]"
         )
     }
+    
+    func test_addFunction_numbersLargestThan1000ShouldBeIgnored() throws {
+        XCTAssertEqual(try Calculator.add(numbers: "1,2,5,1001"), 8)
+        XCTAssertEqual(try Calculator.add(numbers: "1\n,2,3,1000"), 1006)
+        XCTAssertEqual(try Calculator.add(numbers: "1,\n2004,4"), 5)
+        XCTAssertEqual(try Calculator.add(numbers: "//;\n1;3;4;1001"), 8)
+        XCTAssertEqual(try Calculator.add(numbers: "//@\n2000@3@8"), 11)
+    }
 }
 
 extension StringCalculatorTests {
