@@ -20,14 +20,14 @@ struct Calculator {
         }
     }
     
-    private static func splitNumbersString(numbers: String) -> (separator: Character?, numbers: String) {
+    private static func splitNumbersString(numbers: String) -> (separator: String?, numbers: String) {
         if numbers.hasPrefix("//") {
             let prefixRange = numbers.startIndex..<numbers.index(numbers.startIndex, offsetBy: 2)
             let numbersWithNoPrefix = numbers.replacingOccurrences(of: "/",
                                                                    with: "",
                                                                    range: prefixRange)
             let stringComponents = numbersWithNoPrefix.split(separator: "\n", maxSplits: 1)
-            return (stringComponents[0].first, String(stringComponents[1]))
+            return (String(stringComponents[0]), String(stringComponents[1]))
         } else {
             return (nil, numbers)
         }
@@ -44,7 +44,7 @@ struct Calculator {
         let (separator, numbers) = splitNumbersString(numbers: numbers)
         let cleanNumbers = numbers.replacingOccurrences(of: "\n", with: "")
         let numbersIntArray = cleanNumbers
-            .split(separator: separator ?? ",")
+            .components(separatedBy: separator ?? ",")
             .map( { Int($0) ?? 0 } )
             .filter( { $0 <= 1000 } )
         try verifyNegativeElements(array: numbersIntArray)
