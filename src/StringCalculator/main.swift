@@ -10,6 +10,6 @@ import Foundation
 while true {
     print("Insert the string:")
     if let str = readLine() {
-        print(Calculator.add(numbers: str))
+        print(try Calculator.add(numbers: str))
     }
 }
