@@ -11,7 +11,7 @@ while true {
     print("Insert the string:")
     if let str = readLine() {
         let preparedString = str.replacingOccurrences(of: "\\n", with: "\n")
-        print(try Calculator.add(numbers: preparedString))
+        print(try StringCalculator.add(numbers: preparedString))
     }
     print("\n")
 }
