@@ -50,6 +50,12 @@ class StringCalculatorTests: XCTestCase {
         XCTAssertEqual(try Calculator.add(numbers: "//***\n1***2***3"), 6)
         XCTAssertEqual(try Calculator.add(numbers: "//---\n1---2---3"), 6)
     }
+    
+    func test_addFunction_multipleArbritaryLenghtDelimiters() throws {
+        XCTAssertEqual(try Calculator.add(numbers: "//$,@\n1$2@3"), 6)
+        XCTAssertEqual(try Calculator.add(numbers: "//$,-\n1$2-3$6"), 12)
+        XCTAssertEqual(try Calculator.add(numbers: "//$*$,--\n1$*$2--3$*$6"), 12)
+    }
 }
 
 extension StringCalculatorTests {
