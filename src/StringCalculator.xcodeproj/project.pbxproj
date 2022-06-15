@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		6694B5FA285947E100F489CE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B5F9285947E100F489CE /* main.swift */; };
 		6694B6072859483200F489CE /* StringCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B6062859483200F489CE /* StringCalculatorTests.swift */; };
-		6694B60D28594A0F00F489CE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B60C28594A0F00F489CE /* Calculator.swift */; };
-		6694B60E28594A1300F489CE /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B60C28594A0F00F489CE /* Calculator.swift */; };
+		6694B60D28594A0F00F489CE /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B60C28594A0F00F489CE /* StringCalculator.swift */; };
+		6694B60E28594A1300F489CE /* StringCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6694B60C28594A0F00F489CE /* StringCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 		6694B5F9285947E100F489CE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		6694B6042859483200F489CE /* StringCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6694B6062859483200F489CE /* StringCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculatorTests.swift; sourceTree = "<group>"; };
-		6694B60C28594A0F00F489CE /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		6694B60C28594A0F00F489CE /* StringCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				6694B5F9285947E100F489CE /* main.swift */,
-				6694B60C28594A0F00F489CE /* Calculator.swift */,
+				6694B60C28594A0F00F489CE /* StringCalculator.swift */,
 			);
 			path = StringCalculator;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6694B5FA285947E100F489CE /* main.swift in Sources */,
-				6694B60D28594A0F00F489CE /* Calculator.swift in Sources */,
+				6694B60D28594A0F00F489CE /* StringCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6694B6072859483200F489CE /* StringCalculatorTests.swift in Sources */,
-				6694B60E28594A1300F489CE /* Calculator.swift in Sources */,
+				6694B60E28594A1300F489CE /* StringCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

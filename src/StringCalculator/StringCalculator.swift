@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Calculator {
+struct StringCalculator {
     
     private enum CalculatorError: LocalizedError {
         case negativesNotAllowed([Int])
