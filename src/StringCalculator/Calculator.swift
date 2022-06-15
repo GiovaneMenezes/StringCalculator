@@ -9,7 +9,8 @@ import Foundation
 
 struct Calculator {
     static func add(numbers: String) -> Int {
-        numbers.split(separator: ",").reduce(0) { partialResult, number in
+        let cleanNumbers = numbers.replacingOccurrences(of: "\n", with: "")
+        return cleanNumbers.split(separator: ",").reduce(0) { partialResult, number in
             partialResult + (Int(number) ?? 0)
         }
     }
